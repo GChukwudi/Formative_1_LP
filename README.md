@@ -72,14 +72,14 @@ A system monitoring tool that uses a C extension with Python to track and visual
 - `system_monitor.py`: Python script for plotting the data
 
 ### Compilation and Installation
-```bash
-python setup.py build
-python setup.py install
+```
+python3 setup.py build
+python3 setup.py install --user
 ```
 
 ### Usage
-```bash
-python system_monitor.py
+```
+python3 system_monitor.py
 ```
 
 The program will display a real-time graph showing:
@@ -87,7 +87,7 @@ The program will display a real-time graph showing:
 - Memory usage percentage
 - Network usage in bytes/sec
 
-The data is sampled every 2 seconds, as specified in the requirements.
+The data is sampled every second, as specified in the requirements.
 
 ## Task 4: File Encryption Using Shared Libraries
 

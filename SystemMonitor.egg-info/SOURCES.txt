@@ -1,0 +1,7 @@
+README.md
+setup.py
+systemmonitor.c
+SystemMonitor.egg-info/PKG-INFO
+SystemMonitor.egg-info/SOURCES.txt
+SystemMonitor.egg-info/dependency_links.txt
+SystemMonitor.egg-info/top_level.txt
