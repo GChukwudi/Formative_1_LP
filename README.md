@@ -98,22 +98,22 @@ A file encryption and decryption system using a symmetric key approach with a sh
 
 ### Compilation
 ```
-# Compile the shared library
-gcc -fPIC -shared -o libencrypt.so encrypt_lib.c
+# Compile the object file with position-independent code
+gcc -Wall -Wextra -fPIC -c encrypt.c
 
-# Compile the executable, linking with the shared library
-gcc -o file_encryptor encryptor.c -L. -lencrypt -Wl,-rpath,.
+# Create the shared library
+gcc -shared -o libcrypto.so encrypt.o
+
+# Compile a program that uses the library
+gcc -Wall -o encrypt -L. -lcrypto -Wl,-rpath,.
+
+
 ```
 
 ### Usage
 To encrypt files in the current directory:
 ```
-./file_encryptor encrypt
-```
-
-To decrypt encrypted files:
-```
-./file_encryptor decrypt
+./encrypt
 ```
 
 The program will:
