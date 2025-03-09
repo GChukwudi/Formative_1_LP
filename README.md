@@ -110,6 +110,13 @@ gcc -Wall -o encrypt -L. -lcrypto -Wl,-rpath,.
 
 ```
 
+#### Create sample files for testing:
+```
+echo "This is the first sample file for testing encryption." > file1.txt
+echo "This is the second sample file. Let's see if it works!" > file2.txt
+add more...
+```
+
 ### Usage
 To encrypt files in the current directory:
 ```
