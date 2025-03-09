@@ -94,12 +94,10 @@ The data is sampled every second, as specified in the requirements.
 A file encryption and decryption system using a symmetric key approach with a shared library.
 
 ### Files
-- `encrypt_lib.c`: Source code for the encryption/decryption library
-- `encrypt_lib.h`: Header file for the library
-- `encryptor.c`: Main program that uses the library
+- `encrypt.c`: Source code for the encryption/decryption library and program to run the encrption and decryption
 
 ### Compilation
-```bash
+```
 # Compile the shared library
 gcc -fPIC -shared -o libencrypt.so encrypt_lib.c
 
@@ -109,12 +107,12 @@ gcc -o file_encryptor encryptor.c -L. -lencrypt -Wl,-rpath,.
 
 ### Usage
 To encrypt files in the current directory:
-```bash
+```
 ./file_encryptor encrypt
 ```
 
 To decrypt encrypted files:
-```bash
+```
 ./file_encryptor decrypt
 ```
 
